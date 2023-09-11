@@ -1,0 +1,26 @@
+<h1 style="text-align: center;">Markets</h1>
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+      <th>State</th>
+      <th>More Info</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @markets['data'].each do |m| %>
+      <tr>
+        <td><%= m['attributes']['name'] %></td>
+        <td><%= m['attributes']['city'] %></td>
+        <td><%= m['attributes']['state'] %></td>
+        <td><%= link_to "More Info", market_path(m['id']) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+
+
+
+

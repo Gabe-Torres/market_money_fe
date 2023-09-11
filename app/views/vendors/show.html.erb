@@ -1,0 +1,14 @@
+<h1 style="text-align: center;"><%= @vendor['data']['attributes']['name'] %></h1>
+
+<h3>Contact Info: </h3>
+  <ul>
+    <p>Name: <%= @vendor['data']['attributes']['contact_name'] %> </p>
+    <p>Phone: <%= @vendor['data']['attributes']['contact_phone'] %> </p>
+  </ul>
+<div>
+  <p>Credit Accepted: <%= @vendor['data']['attributes']['credit_accepted'] ? "Yes" : "No" %></p>
+</div>
+
+<div>
+  <p>Description: <%= @vendor['data']['attributes']['description'] %></p>
+</div>
