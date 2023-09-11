@@ -1,0 +1,17 @@
+<h1 style="text-align: center;"><%= @market['data']['attributes']['name'] %></h1>
+<h2 style="text-align: center;"><%= combine_address(
+    @market['data']['attributes']['street'],
+    @market['data']['attributes']['city'],
+    @market['data']['attributes']['state'],
+    @market['data']['attributes']['zip']
+) %> </h2>
+
+
+<h3>Vendors At Our Market</h3>
+  <ul>
+    <% @vendors['data'].each do |vendor| %>
+      <ul>
+        <%= link_to vendor['attributes']['name'], vendor_path(vendor['id']) %>
+      </ul>
+    <% end %>
+  </ul>
